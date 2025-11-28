@@ -1,11 +1,21 @@
+{% load static%}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link type="text/css" href="{% static 'sultan/css/style.css' %}" rel="stylesheet">
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
 <body>
     <h3>HEADER</h3>
+    <div>
+        <a href="{% url 'home' %}"><img style="width:200px; " src="{% static 'sultan/images/logo-search-grid-2x.png' %}"></a>
+        <a href="{% url 'catalog' 'men'%}">Мужской Каталог</a>
+        <a href="{% url 'catalog' 'women' %}">Женский Каталог</a>
+        <a href="{% url 'catalog' 'kids' %}">Детский Каталог</a>
+        <a href="{% url 'contacts' %}">Контакты</a>
+    </div>
 
     {% block content %}
 

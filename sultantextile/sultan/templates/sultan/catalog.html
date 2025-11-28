@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h2>CATALOG OF {{category_slug}}</h2>
+    {% for p in products %}
+        <a href="{% url 'good' p.slug %}">{{p.name}}</a>
+    {% endfor %}
+{% endblock %}

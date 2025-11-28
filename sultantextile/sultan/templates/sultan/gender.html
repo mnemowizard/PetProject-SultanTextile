@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h2>GENDER OF {{gender_slug}}</h2>
+    {% for c in cats %}
+        <a href="{% url 'catalog' c.gender c.slug %}">{{c.name}}</a>
+    {% endfor %}
+{% endblock %}
